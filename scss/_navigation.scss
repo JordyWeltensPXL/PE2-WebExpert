@@ -1,0 +1,9 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.navigation {
+    @include flex(center, space-between);
+    &__logo {
+        font-size: $fs-900;
+    }
+}
