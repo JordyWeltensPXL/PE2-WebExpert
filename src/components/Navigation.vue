@@ -1,8 +1,8 @@
 <template>
     <nav class="navigation">
-        <RouterLink to="/" class="navigation__logo">Logo</RouterLink>
+        <RouterLink to="/" class="navigation__logo">Soundcrate</RouterLink>
 
-        <div class="navigation links">
+        <div class="navigation__links">
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/">Products</RouterLink>
           <RouterLink to="/">About us</RouterLink>
