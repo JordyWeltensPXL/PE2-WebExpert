@@ -1,7 +1,21 @@
-@mixin flex($align, $justify) {
+@mixin flex($align: stretch, $justify: flex-start, $direction: row) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
+    flex-direction: $direction;
 }
 
+@mixin button-border($thickness, $color) {
+    border: $thickness solid $color;
+}
+
+@mixin font-style($style) {
+    font-style: $style;
+}
+
+@mixin gradient-text($color) {
+    background: -webkit-linear-gradient($color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 

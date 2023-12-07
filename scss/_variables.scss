@@ -1,4 +1,5 @@
-$fs-1000: 5rem;
+//Font-sizes
+$fs-1000: 5.5rem;
 $fs-900: 3rem;
 $fs-800: 2.5rem;
 $fs-700: 2rem;
@@ -9,12 +10,29 @@ $fs-300: 1rem;
 $fs-200: 0.8rem;
 $fs-100: 0.7rem;
 
+//Font-weights
 $fw-700: bold;
 $fw-500: regular;
 $fw-300: small;
 
+//font-families
 $font-family: Montserrat, sans-serif;
 
+//centering divs
 $centered: 0 auto;
 
-$primary-gradient: 0deg ,#553D6E, #F35768 
+//colors
+$primary-gradient: 0deg ,#553D6E, #F35768;
+$primary-color: #F35768;
+$neutral-white: white;
+$neutral-grey: #F0F0F0;
+$neutral-black: black;
+
+//line-height
+$lh-160: 1.6;
+
+//button-styling
+$button-padding: 16px 32px;
+
+//hovers
+$hover-pointer: pointer;

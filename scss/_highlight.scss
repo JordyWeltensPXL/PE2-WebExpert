@@ -1,0 +1,57 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.highlight{
+    width: 100%;
+    @include flex();
+    margin-top: 4rem;
+    &__text {
+        @include flex(start, center, column);
+        gap: 2rem;
+        width: 60%;
+        &__headline {
+            font-size: $fs-1000;
+            font-weight: $fw-700;
+            @include font-style(italic);
+            @include gradient-text($primary-gradient);
+        }
+        &__description{
+            line-height: $lh-160;
+        };
+        &__buttons {
+            @include flex(center, start);
+            gap: 1rem;
+            &__button {
+                padding: $button-padding;
+                &:hover {
+                    cursor: $hover-pointer;
+                }
+            }
+            .button--primary {
+                background-color: $primary-color;
+                @include button-border(1px, $primary-color);
+                color: $neutral-white;
+                font-weight: $fw-700;
+            }
+            .button--secondary {
+                background-color: $neutral-white;
+                @include button-border(1px, $neutral-black);
+            }
+        }
+    }
+    &__images {
+        width: 40%;
+        @include flex(center, end);
+        position: relative;
+        &--album {
+            max-width: 100%;
+        }
+        &--signature {
+            max-height: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-30deg);
+        }
+    }
+}
