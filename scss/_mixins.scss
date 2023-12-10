@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @mixin flex($align: stretch, $justify: flex-start, $direction: row) {
     display: flex;
     align-items: $align;
@@ -17,5 +19,23 @@
     background: -webkit-linear-gradient($color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@mixin sectionWidth() {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@mixin grid($number, $size) {
+    display: grid;
+    grid-template-columns: repeat($number, $size);
+}
+
+@mixin buttonPrimary() {
+    background-color: $primary-color;
+    @include button-border(1px, $primary-color);
+    color: $neutral-white;
+    font-weight: $fw-700;
+    padding: $button-padding
 }
 

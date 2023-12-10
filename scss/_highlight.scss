@@ -2,9 +2,10 @@
 @use 'mixins' as *;
 
 .highlight{
+    @include sectionWidth();
     width: 100%;
     @include flex();
-    margin-top: 4rem;
+    margin-top: 5rem;
     &__text {
         @include flex(start, center, column);
         gap: 2rem;
@@ -45,13 +46,6 @@
         position: relative;
         &--album {
             max-width: 100%;
-        }
-        &--signature {
-            max-height: 150px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: rotate(-30deg);
         }
     }
 }

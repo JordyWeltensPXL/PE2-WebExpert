@@ -1,0 +1,21 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer {
+    padding-block: $p-block;
+    @include sectionWidth();
+    @include grid(2, 1fr);
+    &__contact {
+        &__headline {
+            font-size: $fs-600;
+        }
+        &__socials {
+            @include flex();
+            gap: 1rem;
+        }
+        &__help {
+            @include flex();
+            gap: 1rem;
+        }
+    }
+}

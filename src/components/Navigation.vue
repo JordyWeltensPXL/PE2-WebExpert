@@ -9,7 +9,6 @@
           <RouterLink to="/login">Login</RouterLink>
           <span>cart icon</span>
         </div>
-        
       </nav>
 </template>
 

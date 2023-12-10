@@ -9,10 +9,8 @@
       </div>
     </div>
     <div class="highlight__images">
-      <img class="highlight__images--album" src="@/assets/Juice-WRLD.webp" alt="Juice WRLD album cover">
-      <img class="highlight__images--signature" src="@/assets/signature.png" alt="Juice WRLD album cover">  
+      <img class="highlight__images--album" src="@/assets/Juice-WRLD.webp" alt="Juice WRLD album cover">    </div>
     </div>
-  </div>
 </template>
 
 <script>
