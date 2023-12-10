@@ -8,7 +8,7 @@
         <li class="popular__section__items__item"><img src="@/assets/lil-tecca.jpeg" alt=""></li>
         <li class="popular__section__items__item"><img src="@/assets/roddy-ricch.jpg" alt=""></li>
       </ul>
-      <button class="popular__section__button"><RouterLink to="/products">View all albums</RouterLink></button>
+      <RouterLink class="popular__section__button" to="/products">View all albums</RouterLink>
     </div>
   </div>
 </template>

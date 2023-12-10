@@ -20,6 +20,9 @@
         }
         &__button {
             @include buttonPrimary();
+            &:hover {
+                cursor: $hover-pointer;
+            }
         }
     }
 }
