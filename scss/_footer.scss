@@ -6,16 +6,47 @@
     @include sectionWidth();
     @include grid(2, 1fr);
     &__contact {
+        display: grid;
+        gap: 2rem;
         &__headline {
             font-size: $fs-600;
         }
         &__socials {
-            @include flex();
-            gap: 1rem;
+            @include grid(5, 75px);
+            font-size: $fs-800;
+            &:hover {
+                cursor: $hover-pointer;
+            }
         }
         &__help {
             @include flex();
+            gap: 2rem;
+            &__links {
+                &:hover {
+                    text-decoration: underline;
+                    cursor: $hover-pointer;
+                }
+            }
+        }
+    }
+    &__newsletter {
+        @include flex(stretch, start, column);
+        gap: 2rem;
+        &__headline {
+            font-size: $fs-700;
+            font-weight: $fw-700;
+        }
+        &__form {
+            @include flex();
             gap: 1rem;
+            &__input {
+                background-color: $neutral-grey;
+                padding: $button-padding;
+                width: 100%
+            }
+            &__button {
+                @include buttonPrimary();
+            }
         }
     }
 }
