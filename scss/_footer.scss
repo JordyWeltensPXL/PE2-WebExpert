@@ -4,23 +4,21 @@
 .footer {
     padding-block: $p-block;
     @include sectionWidth();
-    @include grid(2, 1fr);
+    @include grid(2, 1fr, 2rem);
     &__contact {
         display: grid;
-        gap: 2rem;
         &__headline {
             font-size: $fs-600;
         }
         &__socials {
-            @include grid(5, 75px);
+            @include grid(5, 75px, 0);
             font-size: $fs-800;
             &:hover {
                 cursor: $hover-pointer;
             }
         }
         &__help {
-            @include flex();
-            gap: 2rem;
+            @include flex($gap: 2rem);
             &__links {
                 &:hover {
                     text-decoration: underline;
@@ -30,19 +28,15 @@
         }
     }
     &__newsletter {
-        @include flex(stretch, start, column);
-        gap: 2rem;
+        @include flex(stretch, start, column, 2rem);
         &__headline {
             font-size: $fs-700;
             font-weight: $fw-700;
         }
         &__form {
-            @include flex();
-            gap: 1rem;
+            @include flex($gap: 1rem);
             &__input {
-                background-color: $neutral-grey;
-                padding: $button-padding;
-                width: 100%
+                @include inputField();
             }
             &__button {
                 @include buttonPrimary();

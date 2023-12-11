@@ -3,8 +3,7 @@
 
 .products {
     @include sectionWidth();
-    @include flex(stretch, flex-start, column);
-    gap: 1rem;
+    @include flex(stretch, flex-start, column, 1rem);
     padding-top: $p-block;
     &__headline {
         font-size: $fs-700;
@@ -17,8 +16,7 @@
         max-width: 75%
     }
     &__filters {
-        @include flex(center, start);
-        gap: 1rem;
+        @include flex(center, start, $gap: 1rem);
         margin-bottom: 1rem;
         &__button {
             background-color: $neutral-grey;
@@ -30,15 +28,13 @@
         }
     }
     &__productCards {
-        @include grid(4, 1fr);
-        gap: 2rem
+        @include grid(4, 1fr, 2rem);
     }
     &__pages {
         @include flex(center, space-evenly);
         margin-top: $p-block;
         &__items {
-            @include flex(center, center);
-            gap: 1rem;
+            @include flex(center, center, $gap: 1rem);
             &__select {
                 border: 1px solid $neutral-black;
                 padding: 8px 16px;
@@ -46,8 +42,7 @@
             }
         }
         &__list {
-            @include flex();
-            gap: 1rem;
+            @include flex($gap: 1rem);
             &__listItem {
                 &__button {
                     padding: 8px 16px;

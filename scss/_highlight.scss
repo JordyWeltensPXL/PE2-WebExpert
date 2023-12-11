@@ -7,8 +7,7 @@
     @include flex();
     margin-top: 5rem;
     &__text {
-        @include flex(start, center, column);
-        gap: 2rem;
+        @include flex(start, center, column, 2rem);
         width: 60%;
         &__headline {
             font-size: $fs-1000;
@@ -20,8 +19,7 @@
             line-height: $lh-160;
         };
         &__buttons {
-            @include flex(center, start);
-            gap: 1rem;
+            @include flex(center, start, $gap: 1rem);
             &__button {
                 padding: $button-padding;
                 &:hover {

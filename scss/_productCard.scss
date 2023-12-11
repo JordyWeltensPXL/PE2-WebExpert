@@ -7,9 +7,8 @@
         width: 100%;
     }
     &__info {
-        @include flex(stretch, center, column);
+        @include flex(stretch, center, column, .5rem);
         padding: 1.5rem;
-        gap: .5rem;
         &__headline {
             font-weight: $fw-700;
         }

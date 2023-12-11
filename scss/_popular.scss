@@ -7,16 +7,14 @@
     margin-top: 5rem;
     padding-block: 5rem;
     &__section {
-        @include flex(end, flex-start, column);
-        gap: 2rem;
+        @include flex(end, flex-start, column, 2rem);
         @include sectionWidth();
         &__headline {
             font-size: $fs-800;
             align-self: start;
         }
         &__items {
-            @include grid(4, 300px);
-            gap: 2rem;
+            @include grid(4, 300px, 2rem);
         }
         &__button {
             @include buttonPrimary();

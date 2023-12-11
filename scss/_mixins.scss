@@ -1,10 +1,11 @@
 @use 'variables' as *;
 
-@mixin flex($align: stretch, $justify: flex-start, $direction: row) {
+@mixin flex($align: stretch, $justify: flex-start, $direction: row, $gap: 0) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
     flex-direction: $direction;
+    gap: $gap;
 }
 
 @mixin button-border($thickness, $color) {
@@ -26,9 +27,10 @@
     margin: 0 auto;
 }
 
-@mixin grid($number, $size) {
+@mixin grid($number, $size, $gap) {
     display: grid;
     grid-template-columns: repeat($number, $size);
+    gap: $gap;
 }
 
 @mixin buttonPrimary() {
@@ -45,8 +47,8 @@
 }
 
 @mixin inputField() {
-    border: 1px solid $neutral-greyer;
-    padding: .5rem 1rem;
+    background-color: $neutral-grey;
+    padding: $button-padding;
     width: 100%;
 }
 

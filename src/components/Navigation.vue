@@ -6,7 +6,7 @@
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/products">Products</RouterLink>
           <RouterLink to="/login">Login</RouterLink>
-          <span>cart icon</span>
+          <RouterLink to="/cart"><i class="fa-solid fa-cart-shopping"></i></RouterLink>
         </div>
       </nav>
 </template>
