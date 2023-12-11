@@ -39,3 +39,14 @@
     padding: $button-padding
 }
 
+@mixin form() {
+    gap: .5rem;
+    width: 100%;
+}
+
+@mixin inputField() {
+    border: 1px solid $neutral-greyer;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+

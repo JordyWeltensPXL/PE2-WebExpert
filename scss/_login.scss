@@ -1,0 +1,66 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.login {
+    @include sectionWidth();
+    max-width: $login-width;
+    border: 1px solid $neutral-grey;
+    border-radius: 2px;
+    @include flex(center, center, column);
+    padding: $p-block;
+    margin-block: $p-block;
+    gap: 2rem;
+    box-shadow: $cardBoxShadow;
+    &__headline {
+        font-weight: $fw-700;
+        font-size: $fs-500;
+        &__span {
+            color: $primary-color
+        }
+    }
+    &__emailForm {
+        @include flex(start, center, column);
+        @include form();
+        &__label {
+            font-weight: $fw-700;
+        }
+        &__input {
+            @include inputField();
+        }
+    }
+    &__passwordForm {
+        @include flex(start, center, column);
+        @include form();
+        &__label {
+            font-weight: $fw-700;
+        }
+        &__input {
+            @include inputField();
+        }
+    }
+    &__signIn {
+        text-align: center;
+        max-width: 100%;
+        padding-block: 16px;
+        @include buttonPrimary();
+        &:hover {
+            cursor: $hover-pointer
+        }
+    }
+    &__noAccount {
+        @include flex();
+        gap: .5rem;
+        &__signUp {
+            color: $primary-color;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__forgotPassword {
+        color: $primary-color;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

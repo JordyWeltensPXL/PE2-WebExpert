@@ -1,0 +1,14 @@
+{
+    "albums": [
+        {
+            "id": "1",
+            "naam": "NF",
+            "genre": "rap"
+        },
+        {
+            "id": "2",
+            "naam": "juice",
+            "genre": "rap"
+        }
+    ]
+}
