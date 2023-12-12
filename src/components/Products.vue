@@ -1,9 +1,6 @@
 
 <script setup>
 import ProductCard from '../components/ProductCard.vue'
-// export default {
-
-// }
 </script>
 
 <template>
@@ -16,15 +13,6 @@ import ProductCard from '../components/ProductCard.vue'
         <button class="products__filters__button"># In Stock</button>
       </div>
       <ul class="products__productCards">
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
-        <li class="products__productCards__card"><ProductCard></ProductCard></li>
         <li class="products__productCards__card"><ProductCard></ProductCard></li>
       </ul>
       <ul class="products__pages">

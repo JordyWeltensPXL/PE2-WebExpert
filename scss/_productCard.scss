@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .productCard {
-    box-shadow:$cardBoxShadow;    
+    box-shadow: $cardBoxShadow;   
     &__image {
         width: 100%;
     }

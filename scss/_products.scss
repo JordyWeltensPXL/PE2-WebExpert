@@ -28,7 +28,9 @@
         }
     }
     &__productCards {
-        @include grid(4, 1fr, 2rem);
+        &__card {
+            @include grid(4, 1fr, 2rem);
+        }
     }
     &__pages {
         @include flex(center, space-evenly);

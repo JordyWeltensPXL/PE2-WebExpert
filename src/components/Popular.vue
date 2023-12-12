@@ -2,12 +2,9 @@
   <div class="popular">
     <div class="popular__section">
       <p class="popular__section__headline">Most Popular Albums</p>
-      <ul class="popular__section__items">
-        <li class="popular__section__items__item"><img src="@/assets/drake.jpg" alt=""></li>
-        <li class="popular__section__items__item"><img src="@/assets/Juice-WRLD.webp" alt=""></li>
-        <li class="popular__section__items__item"><img src="@/assets/lil-tecca.jpeg" alt=""></li>
-        <li class="popular__section__items__item"><img src="@/assets/roddy-ricch.jpg" alt=""></li>
-      </ul>
+      <div class="popular__section__items">
+        <MostPopularAlbums></MostPopularAlbums>
+      </div>
       <RouterLink class="popular__section__button" to="/products">View all albums</RouterLink>
     </div>
   </div>
@@ -15,12 +12,21 @@
 
 <script>
 
+import albumsData from "@/albums.json";
+import MostPopularAlbums from "@/components/MostPopularAlbums.vue";
 
 export default {
-
+  components: {
+    MostPopularAlbums,
+    MostPopularAlbums
+},
+  data() {
+    return {
+      albums: albumsData,
+    }
+  }
 }
 </script>
 
 <style>
-
 </style>

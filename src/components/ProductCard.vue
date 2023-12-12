@@ -1,22 +1,26 @@
 <template>
-    <div class="productCard">
-        <img class="productCard__image" src="@/assets/lil-tecca.jpeg" alt="">
+    <div v-for="album in albums" :key="album.id" class="productCard">
+        <RouterLink to="/"><img class="productCard__image" :src="album.src" alt=""></RouterLink>
         <div class="productCard__info">
-            <p class="productCard__info__headline">Lil Tecca - We love you tecca</p>
-            <p class="productCard__info__description">A compelling debut filled with infectious beats and Tecca's signature lyrical finesse, solidifying his place in the rap game.</p>    
+            <p class="productCard__info__headline">{{album.title}}</p>   
             <div class="productCard__info__buy">
-                <p class="productCard__info__buy__price">€ 24,99</p>  
+                <p class="productCard__info__buy__price">€ {{album.price}}</p>  
                 <button class="productCard__info__buy__button">Add to cart</button>
             </div>
             
-        </div>
-          
+        </div>    
     </div>
 </template>
 
 <script>
-export default {
+import albumsData from "@/albums.json";
 
+export default {
+    data() {
+        return {
+            albums: albumsData 
+        }
+    }
 }
 </script>
 
