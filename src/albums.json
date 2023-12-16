@@ -13,7 +13,7 @@
             "title": "Drake - Scorpion",
             "description": "Scorpion is the fifth studio album by Canadian rapper and singer Drake. It was released on June 29, 2018, by Cash Money Records, Republic Records, and Young Money Entertainment. Scorpion is a double album consisting of 25 tracks.",
             "src": "src/assets/drake.jpg",
-            "price": "24,99",
+            "price": "19,99",
             "VAT": "21",
             "stock": "50"
         },
@@ -58,7 +58,7 @@
             "title": "NF - Clouds",
             "description": "Clouds (The Mixtape) is a commercial mixtape by American rapper NF. The mixtape was released on March 26, 2021, through his independent label (NF Real Music) with guest appearances from Hopsin and Tech N9ne. It was preceded by the singles Paid My Dues, Clouds, and Lost.",
             "src": "src/assets/NF-clouds.jpeg",
-            "price": "24,99",
+            "price": "19,99",
             "VAT": "21",
             "stock": "39"
         },
@@ -94,7 +94,7 @@
             "title": "Tourist LeMC - En Route",
             "description": "En route is the debut studio album of the Flemish singer-songwriter Tourist LeMC. The album was released on March 20, 2015, by Top Notch. The album includes various singles such as Koning liefde (King Love), En route, Meester kunstenaar (Master Artist), and Horizon.",
             "src": "src/assets/tourist-enroute.jpeg",
-            "price": "24,99",
+            "price": "19,99",
             "VAT": "21",
             "stock": "14"
         },
@@ -130,7 +130,7 @@
             "title": "Future - Pluto x Baby Pluto",
             "description": "Pluto x Baby Pluto is a collaborative studio album by American rappers Future and Lil Uzi Vert. It was released on November 13, 2020, and was previewed through several trailers starting from July 2020. The title signifies the combination of both artists' nicknames: Future is referred to as Pluto, as expressed through his debut album Pluto (2012), while Lil Uzi Vert identifies as Baby Pluto, as expressed through the song Baby Pluto from Eternal Atake (2020).",
             "src": "src/assets/future-pluto.jpeg",
-            "price": "24,99",
+            "price": "19,99",
             "VAT": "21",
             "stock": "61"
         },
@@ -139,7 +139,7 @@
             "title": "Future - I Never Liked You",
             "description": "I Never Liked You (stylized in all caps) is the ninth studio album by American rapper Future. It was released on April 29, 2022, by Freebandz and Epic Records. The production on the album was handled by multiple producers including ATL Jacob, FnZ, Southside, Taurus, TM88, and Wheezy, among others.",
             "src": "src/assets/future-ineverlikedyou.jpeg",
-            "price": "24,99",
+            "price": "19,99",
             "VAT": "21",
             "stock": "51"
         },

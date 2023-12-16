@@ -1,0 +1,21 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.mostPopularAlbums {
+    position: relative;
+    overflow: hidden;
+    &__overlay {
+        @include overlay();
+        @include flex(center, center);
+        opacity: 0;
+        transition: .2s all;
+        font-weight: $fw-700;
+        font-size: $fs-400;
+        text-align: center;
+        padding: 1rem;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
