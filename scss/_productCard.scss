@@ -50,6 +50,18 @@
     @include flex(center, center, row, 1rem);
     margin-top: 3rem;
     &__button {
-        background-color: red; 
+        padding: $button-padding;
+        background-color: $neutral-grey;
+        cursor: $hover-pointer;
+    }
+}
+.items-per-page {
+    text-align: center;
+    margin-top: 2rem;
+    &__select {
+        padding: .5rem;
+        margin-inline: 1rem;
+        background-color: $neutral-grey;
+        cursor: $hover-pointer;
     }
 }

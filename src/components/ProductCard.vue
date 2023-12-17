@@ -1,3 +1,60 @@
+<script>
+import albumsData from "@/albums.json";
+
+export default {
+  data() {
+    return {
+      albums: albumsData,
+      filters: {
+        stock: false,
+        price: false,
+      },
+      itemsPerPage: 10,
+      currentPage: 1,
+    };
+  },
+  computed: {
+    filteredAlbums() {
+      return this.albums.filter((album) => {
+        const meetsStockCriteria = !this.filters.stock || album.stock < 40;
+        const meetsPriceCriteria =
+          !this.filters.price || parseFloat(album.price.replace(",", ".")) < 20;
+
+        return meetsStockCriteria && meetsPriceCriteria;
+      });
+    },
+    displayedAlbums() {
+    const start = (this.currentPage - 1) * this.itemsPerPage;
+    const end = start + this.itemsPerPage;
+
+    return this.filteredAlbums.slice(start, end);
+    },
+    totalPages() {
+    return Math.ceil(this.filteredAlbums.length / this.itemsPerPage);
+    },
+    },
+    methods: {
+    toggleFilter(filterType) {
+      this.filters[filterType] = !this.filters[filterType];
+      this.currentPage = 1;
+    },
+    prevPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--;
+      }
+    },
+    nextPage() {
+      if (this.currentPage < this.totalPages) {
+        this.currentPage++;
+      }
+    },
+    handleItemsPerPageChange() {
+    this.currentPage = 1;
+    },
+  },
+};
+</script>
+
 <template>
     <div>
         <div class="filters">
@@ -7,7 +64,7 @@
           </div>
         <div class="wrapper">
             <div v-for="album in displayedAlbums" :key="album.id" class="productCard">
-              <RouterLink to="/">
+              <RouterLink :to="{ name: 'productDetailPage', params: { id: album.id }}">
                 <img class="productCard__image" :src="album.src" alt="">
               </RouterLink>
               <div class="productCard__info">
@@ -28,72 +85,14 @@
     </div>
 
     <div class="items-per-page">
-        <label for="itemsPerPage">Items per page:</label>
-        <select v-model="itemsPerPage" @change="handleItemsPerPageChange" id="itemsPerPage">
-          <option value="8">8</option>
-          <option value="16">16</option>
-          <option value="24">24</option>
+        <label class="items-per-page__label" for="itemsPerPage">Items per page:</label>
+        <select class="items-per-page__select" v-model="itemsPerPage" @change="handleItemsPerPageChange" id="itemsPerPage">
+          <option class="items-per-page__option" value="10">10</option>
+          <option class="items-per-page__option" value="20">20</option>
+          <option class="items-per-page__option" value="30">30</option>
         </select>
       </div>
   </template>
-  
-  <script>
-import albumsData from "@/albums.json";
-
-export default {
-  data() {
-    return {
-      albums: albumsData,
-      filters: {
-        stock: false,
-        price: false,
-      },
-      itemsPerPage: 8,
-      currentPage: 1,
-    };
-  },
-  computed: {
-    filteredAlbums() {
-      return this.albums.filter((album) => {
-        const meetsStockCriteria = !this.filters.stock || album.stock < 40;
-        const meetsPriceCriteria =
-          !this.filters.price || parseFloat(album.price.replace(",", ".")) < 20;
-
-        return meetsStockCriteria && meetsPriceCriteria;
-      });
-    },
-    displayedAlbums() {
-  const start = (this.currentPage - 1) * this.itemsPerPage;
-  const end = start + this.itemsPerPage;
-
-  return this.filteredAlbums.slice(start, end);
-},
-totalPages() {
-  return Math.ceil(this.filteredAlbums.length / this.itemsPerPage);
-},
-  },
-  methods: {
-    toggleFilter(filterType) {
-      this.filters[filterType] = !this.filters[filterType];
-      this.currentPage = 1;
-    },
-    prevPage() {
-      if (this.currentPage > 1) {
-        this.currentPage--;
-      }
-    },
-    nextPage() {
-      if (this.currentPage < this.totalPages) {
-        this.currentPage++;
-      }
-    },
-    handleItemsPerPageChange() {
-    this.currentPage = 1; // Reset to the first page when items per page changes
-    },
-  },
-};
-</script>
-
   
   <style>
   </style>
