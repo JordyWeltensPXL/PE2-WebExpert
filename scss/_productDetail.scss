@@ -27,4 +27,11 @@
             font-size: $fs-200;
         }
     }
+    &__stock {
+        &--out-of-stock {
+            background-color: $danger;
+            padding: .5rem 1rem;
+            color:$neutral-white;
+        }
+    }
 }

@@ -24,25 +24,12 @@
             width: 100%;
         }
     &__info {
-        @include flex(stretch, space-between, column);
+        @include flex(stretch, space-between, column, 2rem);
         padding: 1.5rem;
-        height: 175px;
         &__headline {
-            font-weight: $fw-700;
+            font-weight: $fw-500;
         }
-        &__description {
-            font-size: $fs-200;
-            font-style: italic;
-            line-height: 1.4;
-        }
-        &__buy {
-            padding-block: .5rem;
-            @include flex(center, space-between);
-            &__button {
-            @include buttonPrimary();
-            cursor: pointer;
-            }
-        }
+        &__price {font-size: $fs-500}
     }
 }
 

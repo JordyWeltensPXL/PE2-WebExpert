@@ -1,3 +1,39 @@
+<template>
+  <div>
+      <div class="filters">
+          <p>Filter:</p>
+          <button class="filters__button" @click="toggleFilter('stock')">&lt; 40 in stock</button>
+          <button class="filters__button" @click="toggleFilter('price')">&lt; € 20</button>
+        </div>
+      <div class="wrapper">
+          <div v-for="album in displayedAlbums" :key="album.id" class="productCard">
+            <RouterLink :to="{ name: 'productDetailPage', params: { id: album.id }}">
+              <img class="productCard__image" :src="album.src" alt="">
+            </RouterLink>
+            <div class="productCard__info">
+              <p class="productCard__info__headline">{{ album.title }}</p>
+              <p class="productCard__info__price">€ {{ album.price }}</p>                
+            </div>
+          </div>
+        </div>
+
+    <div class="pagination">
+      <button class="pagination__button" @click="prevPage" :disabled="currentPage === 1">Previous</button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button class="pagination__button" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+    </div>
+  </div>
+
+  <div class="items-per-page">
+      <label class="items-per-page__label" for="itemsPerPage">Items per page:</label>
+      <select class="items-per-page__select" v-model="itemsPerPage" @change="handleItemsPerPageChange" id="itemsPerPage">
+        <option class="items-per-page__option" value="10">10</option>
+        <option class="items-per-page__option" value="20">20</option>
+        <option class="items-per-page__option" value="30">30</option>
+      </select>
+    </div>
+</template>
+
 <script>
 import albumsData from "@/albums.json";
 
@@ -55,44 +91,7 @@ export default {
 };
 </script>
 
-<template>
-    <div>
-        <div class="filters">
-            <p>Filter:</p>
-            <button class="filters__button" @click="toggleFilter('stock')">&lt; 40 in stock</button>
-            <button class="filters__button" @click="toggleFilter('price')">&lt; € 20</button>
-          </div>
-        <div class="wrapper">
-            <div v-for="album in displayedAlbums" :key="album.id" class="productCard">
-              <RouterLink :to="{ name: 'productDetailPage', params: { id: album.id }}">
-                <img class="productCard__image" :src="album.src" alt="">
-              </RouterLink>
-              <div class="productCard__info">
-                <p class="productCard__info__headline">{{ album.title }}</p>
-                <div class="productCard__info__buy">
-                  <p class="productCard__info__buy__price">€ {{ album.price }}</p>
-                  <button class="productCard__info__buy__button">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-      <div class="pagination">
-        <button class="pagination__button" @click="prevPage" :disabled="currentPage === 1">Previous</button>
-        <span>Page {{ currentPage }} of {{ totalPages }}</span>
-        <button class="pagination__button" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
-      </div>
-    </div>
 
-    <div class="items-per-page">
-        <label class="items-per-page__label" for="itemsPerPage">Items per page:</label>
-        <select class="items-per-page__select" v-model="itemsPerPage" @change="handleItemsPerPageChange" id="itemsPerPage">
-          <option class="items-per-page__option" value="10">10</option>
-          <option class="items-per-page__option" value="20">20</option>
-          <option class="items-per-page__option" value="30">30</option>
-        </select>
-      </div>
-  </template>
   
   <style>
   </style>

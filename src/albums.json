@@ -87,7 +87,7 @@
             "src": "src/assets/travis-utopia.jpeg",
             "price": "24,99",
             "VAT": "21",
-            "stock": "52"
+            "stock": "0"
         },
         {
             "id": "11",
@@ -141,7 +141,7 @@
             "src": "src/assets/future-ineverlikedyou.jpeg",
             "price": "19,99",
             "VAT": "21",
-            "stock": "51"
+            "stock": "0"
         },
         {
             "id": "17",
@@ -168,7 +168,7 @@
             "src": "src/assets/malone-stoney.jpeg",
             "price": "24,99",
             "VAT": "21",
-            "stock": "14"
+            "stock": "0"
         },
         {
             "id": "20",
