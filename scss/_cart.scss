@@ -1,0 +1,65 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.cart {
+    @include sectionWidth();
+    &__headline {
+        font-size: $fs-800;
+        margin-top: $p-block;
+    }
+    &__empty {
+        margin-top: 2rem;
+    }
+    &__content-item-wrapper {
+        @include flex(start, start, row, 1rem);
+        margin-block: 2rem;
+        &-image {
+            max-width: 250px;
+        }
+    }
+}
+.cart__content {
+    &-item-title {
+        font-size: $fs-600;
+    };
+    &-item-quantity {
+        padding: 1rem;
+    }
+    &-item-VAT {
+        font-size: $fs-100;
+    }
+    &-button {
+        padding: 1rem;
+        background-color: $neutral-grey;
+    }
+    &-wrapper {
+        @include flex(start, start, row, 0)
+    }
+    &-item-removeButton {
+        background-color: $neutral-grey;
+        padding: 8px 16px;
+    }
+    &-item-wrapper-info-amount {
+        @include flex(start, start, column, 1rem)
+    }
+}
+
+.cart {
+    &__totalPrice {
+    font-size: $fs-800;
+    }
+    &__orderButton {
+        @include buttonPrimary();
+        margin-top: 2rem;
+    }
+    &__clearButton {
+        padding: 8px 16px;
+        cursor: $hover-pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__buttonsWrapper {
+        @include flex(end, start);
+    }
+}
