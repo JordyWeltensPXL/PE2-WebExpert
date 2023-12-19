@@ -99,3 +99,16 @@ meter {
 :where(dialog:modal) {
     all: revert;
 }
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Remove default appearance on Chrome & Safari */
+    -moz-appearance: none;    /* Remove default appearance on Firefox */
+    appearance: none;         /* Remove default appearance on other browsers */
+    width: 20px;              /* Set width */
+    height: 20px;             /* Set height */
+    border: 1px solid #ccc;   /* Add border */
+    border-radius: 4px;       /* Round corners */
+    cursor: pointer;          /* Change cursor on hover */
+}
+input[type="checkbox"]:checked {
+    background-color: #007bff; /* Example color for checked state */
+}

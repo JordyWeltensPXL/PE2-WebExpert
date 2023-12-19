@@ -9,11 +9,11 @@
       <p class="details__stock details__stock--out-of-stock" v-else>Out of stock</p>
       <div v-if="hasStock" class="details__quantity">
         <label for="quantity">Aantal:</label>
-        <input type="number" id="quantity" :max="album.stock" :min="1" v-model.number="selectedQuantity" @change="checkQuantity">
+        <input class="details__quantity-input" type="number" id="quantity" :max="album.stock" :min="1" v-model.number="selectedQuantity" @change="checkQuantity">
         <button class="details__button" @click="addToCart" :disabled="!hasStock">Add to Cart</button>
       </div>
       <div v-if="showMessage" class="details__notification">
-        Album(s) toegevoegd aan winkelmandje!
+        Album(s) added to your shopping cart!
       </div>
     </div>
   </div>

@@ -1,0 +1,50 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.checkout {
+    @include sectionWidth();
+    margin-top: $p-block;
+    &__title {
+        font-size: $fs-800;
+    }
+    &__list {
+        padding-block: 1rem;
+    }
+    &__vat {
+        margin-bottom: 2rem;
+    }
+    &__total-incl-vat {
+        font-size: $fs-600;
+    }
+    &__link button {
+        text-decoration: underline;
+        cursor: $hover-pointer;
+        padding-top: 1rem
+    }
+}
+
+.billing-form {
+    @include sectionWidth();
+    padding-top: 2rem;
+    &__fields {
+        @include flex(start, start, row, 1rem);
+        margin-top: 2rem;
+    }
+    &__input {
+        background-color: $neutral-grey;
+        padding: 1rem;
+        width: 30%;
+    }
+    &__submit {
+        padding: 1rem;
+        background-color: $primary-color;
+        color: $neutral-white;
+        font-weight: $fw-700;
+        cursor: $hover-pointer;
+        display: block;
+        margin-top: 2rem;
+    }
+    &-wrapper {
+        @include flex(center, start, row, 1rem)
+    }
+}

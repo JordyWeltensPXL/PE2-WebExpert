@@ -24,7 +24,7 @@
       </div>
       <p class="cart__totalPrice">Total: € {{ formattedTotal }}</p>
       <div class="cart__buttonsWrapper">
-        <button class="cart__orderButton">Order Now</button>
+        <RouterLink to="/checkout"><button class="cart__orderButton">Order Now</button></RouterLink>
         <button class="cart__clearButton" @click="clearCart">Clear Shopping Cart</button>
       </div>
       
@@ -45,7 +45,7 @@ export default {
     };
 
     const calculateSubtotal = (price, quantity) => {
-      return price * quantity;
+      return (price * quantity).toFixed(2);
     };
 
     const calculateTotalVAT = () => {
