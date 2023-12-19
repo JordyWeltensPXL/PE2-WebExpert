@@ -4,10 +4,17 @@
     <div class="details">
       <p class="details__title">{{album.title}}</p>
       <p class="details__desc">{{album.description}}</p> 
-      <p class="details__price">€ {{album.price}} <span>excluding {{ album.VAT }} % VAT.</span></p> 
+      <p class="details__price">€ {{album.price}} <span>including {{ album.VAT }} % VAT.</span></p> 
       <p class="details__stock" v-if="hasStock">In Stock</p>
       <p class="details__stock details__stock--out-of-stock" v-else>Out of stock</p>
-      <button @click="addToCart" :disabled="!hasStock">Add to Cart</button>
+      <div v-if="hasStock" class="details__quantity">
+        <label for="quantity">Aantal:</label>
+        <input type="number" id="quantity" :max="album.stock" :min="1" v-model.number="selectedQuantity" @change="checkQuantity">
+        <button class="details__button" @click="addToCart" :disabled="!hasStock">Add to Cart</button>
+      </div>
+      <div v-if="showMessage" class="details__notification">
+        Album(s) toegevoegd aan winkelmandje!
+      </div>
     </div>
   </div>
 </template>
@@ -16,12 +23,13 @@
 import albumsData from "@/albums.json";
 import { useCartStore } from '@/stores/cart';
 
-
 export default {
   data() {
     return {
       album: null,
       albums: albumsData,
+      showMessage: false,
+      selectedQuantity: 1
     };
   },
   created() {
@@ -29,21 +37,33 @@ export default {
     this.album = this.albums.find(album => album.id === albumId);
   },
   computed: {
-  hasStock() {
-    return this.album.stock > 1;
-  }
-},
+    hasStock() {
+      return this.album.stock > 0;
+    }
+  },
   methods: {
     addToCart() {
-      // Access the cart store
       const cartStore = useCartStore();
-
-      // Add the current album to the cart
-      cartStore.addToCart(this.album);
+      for (let i = 0; i < this.selectedQuantity; i++) {
+        cartStore.addToCart(this.album);
+      }
+      this.showNotification();
+    },
+    showNotification() {
+      this.showMessage = true;
+      setTimeout(() => {
+        this.showMessage = false;
+      }, 3000);
+    },
+    checkQuantity() {
+      if (this.selectedQuantity > this.album.stock) {
+        this.selectedQuantity = this.album.stock;  // Reset to max available stock if input value exceeds it
+      }
     }
   }
 };
 </script>
+
 
 <style>
 </style>

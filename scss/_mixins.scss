@@ -38,7 +38,8 @@
     @include button-border(1px, $primary-color);
     color: $neutral-white;
     font-weight: $fw-700;
-    padding: $button-padding
+    padding: $button-padding;
+    cursor: $hover-pointer;
 }
 
 @mixin form() {

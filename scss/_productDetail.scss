@@ -34,4 +34,20 @@
             color:$neutral-white;
         }
     }
+    &__button {
+        @include buttonPrimary();
+    }
+    &__notification {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: $neutral-white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 9999;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+      }
 }

@@ -8,8 +8,11 @@ export const useCartStore = defineStore({
   getters: {
     formattedTotal() {
       const total = this.total;
-      const formattedTotal = total.toFixed(2);
-      return typeof formattedTotal === "string" ? formattedTotal : "0.00";
+      const formattedTotal = total.toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+      return formattedTotal;
     },
     total() {
       return this.cart.reduce(
@@ -28,7 +31,7 @@ export const useCartStore = defineStore({
         const price = parseFloat(item.album.price);
         return price * item.quantity;
       }
-      return 0; // Or any default value you prefer if the price is not a valid number
+      return 0;
     },
     addToCart(album) {
       const existingItem = this.cart.find((item) => item.album.id === album.id);
@@ -50,6 +53,7 @@ export const useCartStore = defineStore({
           this.cart.splice(index, 1);
         }
       }
+      this.total;
     },
     clearCart() {
       this.cart = [];

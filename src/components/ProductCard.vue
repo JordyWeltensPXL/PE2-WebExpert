@@ -2,7 +2,7 @@
   <div>
       <div class="filters">
           <p>Filter:</p>
-          <button class="filters__button" @click="toggleFilter('stock')">&lt; 40 in stock</button>
+          <button class="filters__button" @click="toggleFilter('stock')">In Stock</button>
           <button class="filters__button" @click="toggleFilter('price')">&lt; € 20</button>
         </div>
       <div class="wrapper">
@@ -27,9 +27,9 @@
   <div class="items-per-page">
       <label class="items-per-page__label" for="itemsPerPage">Items per page:</label>
       <select class="items-per-page__select" v-model="itemsPerPage" @change="handleItemsPerPageChange" id="itemsPerPage">
-        <option class="items-per-page__option" value="10">10</option>
-        <option class="items-per-page__option" value="20">20</option>
-        <option class="items-per-page__option" value="30">30</option>
+        <option class="items-per-page__option" value="8">8</option>
+        <option class="items-per-page__option" value="16">16</option>
+        <option class="items-per-page__option" value="24">24</option>
       </select>
     </div>
 </template>
@@ -45,16 +45,16 @@ export default {
         stock: false,
         price: false,
       },
-      itemsPerPage: 10,
+      itemsPerPage: 8,
       currentPage: 1,
     };
   },
   computed: {
     filteredAlbums() {
       return this.albums.filter((album) => {
-        const meetsStockCriteria = !this.filters.stock || album.stock < 40;
+        const meetsStockCriteria = !this.filters.stock || album.stock >= 1;
         const meetsPriceCriteria =
-          !this.filters.price || parseFloat(album.price.replace(",", ".")) < 20;
+          !this.filters.price || album.price < 20;
 
         return meetsStockCriteria && meetsPriceCriteria;
       });

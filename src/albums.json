@@ -4,7 +4,7 @@
             "title": "Lil Tecca - We Love You Tecca",
             "description": "A compelling debut filled with infectious beats and Tecca's signature lyrical finesse, solidifying his place in the rap game.",
             "src": "src/assets/lil-tecca.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "96"
         },
@@ -13,16 +13,16 @@
             "title": "Drake - Scorpion",
             "description": "Scorpion is the fifth studio album by Canadian rapper and singer Drake. It was released on June 29, 2018, by Cash Money Records, Republic Records, and Young Money Entertainment. Scorpion is a double album consisting of 25 tracks.",
             "src": "src/assets/drake.jpg",
-            "price": "19,99",
+            "price": "19.99",
             "VAT": "21",
-            "stock": "50"
+            "stock": "0"
         },
         {
             "id": "3",
             "title": "Juice WRLD - Legends Never Die",
             "description": "Legends Never Die is the third studio album by American rapper and singer Juice Wrld. It was posthumously released by Grade A Productions and Interscope Records on July 10, 2020. The album follows Juice Wrld's death from a drug-related seizure approximately seven months prior, on December 8, 2019.",
             "src": "src/assets/juice-WRLD.webp",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "54"
         },
@@ -31,7 +31,7 @@
             "title": "Juice WRLD - Fighting Demons",
             "description": "Fighting Demons is the fourth studio album by American rapper and singer Juice Wrld. It was posthumously released by Grade A Productions and Interscope Records on December 10, 2021. The album features guest appearances from Justin Bieber, Polo G, Trippie Redd, and Suga of BTS.",
             "src": "src/assets/juice2.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "73"
         },
@@ -40,7 +40,7 @@
             "title": "Roddy Ricch - Please Excuse Me For Being Antisocial",
             "description": "Please Excuse Me for Being Antisocial is the debut studio album by American rapper Roddy Ricch. It was released on December 6, 2019, through Atlantic Records and Bird Vision Entertainment. It features guest appearances from Gunna, Lil Durk, Meek Mill, Mustard, Ty Dolla $ign, and A Boogie wit da Hoodie",
             "src": "src/assets/roddy-ricch.jpg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "23"
         },
@@ -49,7 +49,7 @@
             "title": "NF - The Search",
             "description": "The Search is the fourth studio album by American rapper NF. It was released on July 26, 2019, through NF Real Music and Caroline,[2] and was preceded by the singles Why, The Search, When I Grow Up and Time. It features a sole collaboration with Sasha Sloan.",
             "src": "src/assets/NF-search.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "108"
         },
@@ -58,7 +58,7 @@
             "title": "NF - Clouds",
             "description": "Clouds (The Mixtape) is a commercial mixtape by American rapper NF. The mixtape was released on March 26, 2021, through his independent label (NF Real Music) with guest appearances from Hopsin and Tech N9ne. It was preceded by the singles Paid My Dues, Clouds, and Lost.",
             "src": "src/assets/NF-clouds.jpeg",
-            "price": "19,99",
+            "price": "19.99",
             "VAT": "21",
             "stock": "39"
         },
@@ -67,7 +67,7 @@
             "title": "XXXTENTACION - Look At Me",
             "description": "Look at Me: The Album is a compilation album of various songs by rapper and singer XXXTentacion. It was released posthumously on June 10, 2022, 8 days before the fourth anniversary of his death.",
             "src": "src/assets/xxx-lookatme.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "67"
         },
@@ -76,7 +76,7 @@
             "title": "XXXTENTACION - Look At Me",
             "description": "Skins (stylized as SKINS) is the third studio album by American rapper and singer XXXTentacion. It was released through Bad Vibes Forever and Empire Distribution.[5] It is one of the projects, that XXXTentacion worked on before his death, and was released posthumously.",
             "src": "src/assets/xxx-skins.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "71"
         },
@@ -85,7 +85,7 @@
             "title": "Travis Scott - Utopia",
             "description": "Utopia (stylized in all caps) is the fourth studio album by American rapper Travis Scott. It was released through Cactus Jack and Epic Records on July 28, 2023. The album features guest appearances from Teezo Touchdown, Drake, Playboi Carti, Beyoncé, Rob49, 21 Savage and the Weeknd",
             "src": "src/assets/travis-utopia.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "0"
         },
@@ -94,7 +94,7 @@
             "title": "Tourist LeMC - En Route",
             "description": "En route is the debut studio album of the Flemish singer-songwriter Tourist LeMC. The album was released on March 20, 2015, by Top Notch. The album includes various singles such as Koning liefde (King Love), En route, Meester kunstenaar (Master Artist), and Horizon.",
             "src": "src/assets/tourist-enroute.jpeg",
-            "price": "19,99",
+            "price": "19.99",
             "VAT": "21",
             "stock": "14"
         },
@@ -103,7 +103,7 @@
             "title": "Polo G - Die A Legend",
             "description": "Die a Legend is the debut studio album by American rapper Polo G. It was released on June 7, 2019, by Columbia Records. It features his US top 20 single Pop Out featuring Lil Tjay, as well as the sequel to the track titled Pop Out Again featuring Lil Baby and Gunna.",
             "src": "src/assets/polog-diealegend.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "28"
         },
@@ -112,7 +112,7 @@
             "title": "Polo G - The GOAT",
             "description": "The Goat is the second studio album by American rapper Polo G. It was released on May 15, 2020, by Columbia Records. The album features guest appearances from Mustard, Juice Wrld, Stunna 4 Vegas, NLE Choppa, Mike Will Made It, Lil Baby, and BJ the Chicago Kid.",
             "src": "src/assets/polog-thegoat.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "36"
         },
@@ -121,7 +121,7 @@
             "title": "Drake - For All The Dogs",
             "description": "For All the Dogs is the eighth studio album by Canadian rapper and singer Drake. It was released through OVO Sound and Republic Records on October 6, 2023. The album features guest appearances from Teezo Touchdown, 21 Savage, J. Cole, Yeat, SZA, PartyNextDoor, Chief Keef, Bad Bunny, Sexyy Red, and Lil Yachty.",
             "src": "src/assets/drake-forallthedogs.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "42"
         },
@@ -130,7 +130,7 @@
             "title": "Future - Pluto x Baby Pluto",
             "description": "Pluto x Baby Pluto is a collaborative studio album by American rappers Future and Lil Uzi Vert. It was released on November 13, 2020, and was previewed through several trailers starting from July 2020. The title signifies the combination of both artists' nicknames: Future is referred to as Pluto, as expressed through his debut album Pluto (2012), while Lil Uzi Vert identifies as Baby Pluto, as expressed through the song Baby Pluto from Eternal Atake (2020).",
             "src": "src/assets/future-pluto.jpeg",
-            "price": "19,99",
+            "price": "19.99",
             "VAT": "21",
             "stock": "61"
         },
@@ -139,7 +139,7 @@
             "title": "Future - I Never Liked You",
             "description": "I Never Liked You (stylized in all caps) is the ninth studio album by American rapper Future. It was released on April 29, 2022, by Freebandz and Epic Records. The production on the album was handled by multiple producers including ATL Jacob, FnZ, Southside, Taurus, TM88, and Wheezy, among others.",
             "src": "src/assets/future-ineverlikedyou.jpeg",
-            "price": "19,99",
+            "price": "19.99",
             "VAT": "21",
             "stock": "0"
         },
@@ -148,7 +148,7 @@
             "title": "Post Malone - Austin",
             "description": "Austin is the fifth studio album by American musician Post Malone. It was released through Republic and Mercury Records on July 28, 2023. The bonus version of the album was released five days later to include a new track. Production was handled by Malone himself, Andrew Watt, Louis Bell, Max Martin, and Rami Yacoub.",
             "src": "src/assets/malone-austin.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "29"
         },
@@ -157,7 +157,7 @@
             "title": "Post Malone - Hollywood's Bleeding",
             "description": "Hollywood's Bleeding is the third studio album by American rapper and singer Post Malone. It was released on September 6, 2019, by Republic Records. The album features guest appearances from DaBaby, Future, Halsey, Meek Mill, Lil Baby, Ozzy Osbourne, Travis Scott, SZA, Swae Lee, and Young Thug.",
             "src": "src/assets/malone-hollywoodsbleeding.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "84"
         },
@@ -166,7 +166,7 @@
             "title": "Post Malone - Stoney",
             "description": "Stoney is the debut studio album by American rapper and singer Post Malone. It was released on December 9, 2016, by Republic Records. The album features guest appearances from Justin Bieber, Kehlani, and Quavo. The deluxe edition was released on the same day.",
             "src": "src/assets/malone-stoney.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "0"
         },
@@ -175,7 +175,7 @@
             "title": "Pop Smoke - Shoot For The Stars, Aim For The Moon",
             "description": "Shoot for the Stars, Aim for the Moon is the debut studio album by American rapper Pop Smoke. It was posthumously released on July 3, 2020, by Victor Victor Worldwide and Republic Records, and a deluxe edition of the album that includes fifteen additional tracks",
             "src": "src/assets/popsmoke-shootforthestars.jpeg",
-            "price": "24,99",
+            "price": "24.99",
             "VAT": "21",
             "stock": "49"
         }
