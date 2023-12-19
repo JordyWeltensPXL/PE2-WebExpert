@@ -20,9 +20,8 @@
       <input type="text" v-model="billingData.name" placeholder="Name" class="billing-form__input">
       <input type="text" v-model="billingData.address" placeholder="Address" class="billing-form__input">
     </div>
-    <button class="billing-form__submit">Proceed to payment</button>
+    <router-link to="/confirmation" class="billing-form__link"><button class="billing-form__submit">Proceed to payment</button></router-link>
   </div>
-  <input type="checkbox" name="" id="">
 </template>
 
 <script>

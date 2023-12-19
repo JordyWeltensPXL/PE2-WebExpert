@@ -47,6 +47,7 @@ export default {
       },
       itemsPerPage: 8,
       currentPage: 1,
+      
     };
   },
   computed: {

@@ -31,6 +31,7 @@
     &-button {
         padding: 1rem;
         background-color: $neutral-grey;
+        cursor: $hover-pointer;
     }
     &-wrapper {
         @include flex(start, start, row, 0)
@@ -38,6 +39,7 @@
     &-item-removeButton {
         background-color: $neutral-grey;
         padding: 8px 16px;
+        cursor: $hover-pointer;
     }
     &-item-wrapper-info-amount {
         @include flex(start, start, column, 1rem)

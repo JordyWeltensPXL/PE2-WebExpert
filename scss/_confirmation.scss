@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.transaction-confirmation {
+    @include sectionWidth();
+    margin-top: $p-block;
+    &__headline {
+        font-size: $fs-700;
+        margin-bottom: .5rem;
+    }
+    &__message {
+        margin-bottom: 2rem;
+    }
+    &__total {
+        font-size: $fs-600;
+        margin-top: 2rem;
+    }
+    &__link {
+        text-decoration: underline;
+        cursor: $hover-pointer;
+    }
+}

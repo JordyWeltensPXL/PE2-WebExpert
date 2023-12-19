@@ -5,6 +5,7 @@ import Login from "../views/LoginPage.vue";
 import Cart from "../views/CartPage.vue";
 import ProductDetailPage from "../views/ProductDetailPage.vue";
 import Checkout from "../components/Checkout.vue";
+import Confirmation from "../components/Confirmation.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: "/checkout",
       name: "checkout",
       component: Checkout,
+    },
+    {
+      path: "/confirmation",
+      name: "confirmation",
+      component: Confirmation,
     },
   ],
 });
