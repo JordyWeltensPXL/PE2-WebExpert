@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <p class="cart__totalPrice">Total: € {{ formattedTotal }}</p>
+      <p class="cart__totalPrice">Total: € {{ formattedTotal }}{{total}}</p>
       <div class="cart__buttonsWrapper">
         <RouterLink to="/checkout"><button class="cart__orderButton">Order Now</button></RouterLink>
         <button class="cart__clearButton" @click="clearCart">Clear Shopping Cart</button>

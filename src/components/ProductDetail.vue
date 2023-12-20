@@ -22,6 +22,7 @@
 <script>
 import albumsData from "@/albums.json";
 import { useCartStore } from '@/stores/cart';
+import { useAuthStore } from '@/stores/auth';
 
 export default {
   data() {
@@ -43,6 +44,12 @@ export default {
   },
   methods: {
     addToCart() {
+      const authStore = useAuthStore();
+      if (!authStore.isLoggedIn) {
+        this.$router.push({ name: 'login' });
+        return;
+      }
+
       const cartStore = useCartStore();
       for (let i = 0; i < this.selectedQuantity; i++) {
         cartStore.addToCart(this.album);
@@ -57,13 +64,12 @@ export default {
     },
     checkQuantity() {
       if (this.selectedQuantity > this.album.stock) {
-        this.selectedQuantity = this.album.stock;  // Reset to max available stock if input value exceeds it
+        this.selectedQuantity = this.album.stock; 
       }
     }
   }
 };
 </script>
-
 
 <style>
 </style>
