@@ -33,6 +33,7 @@
 <script>
 import usersData from "@/users.json";
 import { useAuthStore } from '@/stores/auth';
+import router from '@/router/index';
 
 export default {
   data() {
@@ -55,6 +56,7 @@ export default {
   if (match) {
     const authStore = useAuthStore();
     authStore.login();
+    router.push({ name: 'cart' });
   } else {
     alert('Invalid email or password!');
   }

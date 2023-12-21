@@ -5,8 +5,20 @@
     padding-block: $p-block;
     @include sectionWidth();
     @include grid(2, 1fr, 2rem);
+    @media (max-width: $mobile-breakpoint) {
+        $gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
     &__contact {
         display: grid;
+        @media (max-width: $laptop-breakpoint) {
+            padding-inline: 5%;
+        }
+        @media (max-width: $tablet-breakpoint) {
+            gap: 1rem;
+        }
+        
         &__headline {
             font-size: $fs-600;
         }
@@ -20,6 +32,7 @@
         &__help {
             @include flex($gap: 2rem);
             &__links {
+                
                 &:hover {
                     text-decoration: underline;
                     cursor: $hover-pointer;
@@ -29,12 +42,23 @@
     }
     &__newsletter {
         @include flex(stretch, start, column, 2rem);
+        @media (max-width: $tablet-breakpoint) {
+            $gap: 1rem;
+            padding-inline: 5%;
+        }
+        @media (max-width: $laptop-breakpoint) {
+            padding-inline: 2%;
+        }
         &__headline {
             font-size: $fs-700;
             font-weight: $fw-700;
+            @media (max-width: $tablet-breakpoint) {
+                padding: 2%;
+            }
         }
         &__form {
             @include flex($gap: 1rem);
+            
             &__input {
                 @include inputField();
             }

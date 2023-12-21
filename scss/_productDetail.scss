@@ -4,15 +4,29 @@
 .detailpage {
     @include sectionWidth();
     @include flex(start, center, row, 1rem);
+    @media (max-width: $tablet-breakpoint) {
+        @include flex(start, center, column, 1rem);
+        margin-top: 0;
+    }
     margin-top: 5rem;
     &__image {
         width: 30%;
+        @media (max-width: $tablet-breakpoint) {
+            width: 100%;
+            padding: 5%;
+        }
     }
 }
 
 .details {
     width: 40%;
+    @media (max-width: $tablet-breakpoint) {
+        width: 100%;
+    }
     padding-inline: 2rem;
+    @media (max-width: $tablet-breakpoint) {
+        padding-inline: 5%;
+    }
     @include flex(start, center, column, 1rem);
     &__title {
         font-size: $fs-600;

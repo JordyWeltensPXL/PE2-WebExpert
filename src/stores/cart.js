@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 export const useCartStore = defineStore({
   id: "cart",
   state: () => ({
-    cart: [],
+    cart: JSON.parse(localStorage.getItem("cart") || "[]"),
   }),
   getters: {
     formattedTotal() {
@@ -41,6 +41,7 @@ export const useCartStore = defineStore({
       } else {
         this.cart.push({ album, quantity: 1 });
       }
+      this.saveCartToLocalStorage();
     },
     removeFromCart(albumId) {
       const index = this.cart.findIndex((item) => item.album.id === albumId);
@@ -52,11 +53,16 @@ export const useCartStore = defineStore({
         } else {
           this.cart.splice(index, 1);
         }
+        this.saveCartToLocalStorage();
       }
       this.total;
     },
     clearCart() {
       this.cart = [];
+      this.saveCartToLocalStorage();
+    },
+    saveCartToLocalStorage() {
+      localStorage.setItem("cart", JSON.stringify(this.cart));
     },
   },
 });

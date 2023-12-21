@@ -5,12 +5,44 @@
     @include sectionWidth();
     @include flex(center, space-between);
     padding-top: 1rem;
+    
     &__logo {
         font-size: $fs-700;
         font-weight: $fw-700;
         @include gradient-text($primary-gradient);
+
+        @media (max-width: $laptop-breakpoint) {
+            font-size: $fs-600; 
+            padding-inline: 2%;
+        }
+
+        @media (max-width: $tablet-breakpoint) {
+            font-size: $fs-500; 
+            padding-inline: 2%;
+        }
+        
+        @media (max-width: $mobile-breakpoint) {
+            font-size: $fs-400; 
+            padding-inline: 5%;
+        }
     }
+    
     &__links {
         @include flex(center, center, $gap: 2rem);
+        
+        @media (max-width: $laptop-breakpoint) {
+            $gap: 1rem;
+            padding-inline: 2%;
+        }
+
+        @media (max-width: $tablet-breakpoint) {
+            padding-inline: 5%;
+        }
+        
+        @media (max-width: $mobile-breakpoint) {
+            $gap: 1rem;
+            padding-inline: 5%;
+        }
+
     }
 }

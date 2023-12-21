@@ -5,9 +5,20 @@
     @include sectionWidth();
     @include flex(stretch, flex-start, column, 1rem);
     padding-top: $p-block;
+    @media (max-width: $laptop-breakpoint) {
+        padding: 5%;
+    }
     &__headline {
         font-size: $fs-700;
         font-weight: $fw-700;
         max-width: 75%;
+        @media (max-width: $tablet-breakpoint) {
+            max-width: 100%;
+        }
+    }
+    &__description {
+        @media (max-width: $tablet-breakpoint) {
+            padding-block: 1rem;
+        }
     }
 }

@@ -4,6 +4,12 @@
 .checkout {
     @include sectionWidth();
     margin-top: $p-block;
+    @media (max-width: $tablet-breakpoint) {
+        padding: 5%;
+    }
+    @media (max-width: $laptop-breakpoint) {
+        padding: 2%;
+    }
     &__title {
         font-size: $fs-800;
     }
@@ -26,6 +32,12 @@
 .billing-form {
     @include sectionWidth();
     padding-top: 2rem;
+    @media (max-width: $tablet-breakpoint) {
+        padding-inline: 5%;
+    }
+    @media (max-width: $laptop-breakpoint) {
+        padding-inline: 2%;
+    }
     &__fields {
         @include flex(start, start, row, 1rem);
         margin-top: 2rem;

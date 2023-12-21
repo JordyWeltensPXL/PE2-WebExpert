@@ -4,6 +4,7 @@
 .filters {
     @include flex(center, start, $gap: 1rem);
     margin-bottom: 1rem;
+
     &__button {
         background-color: $neutral-grey;
         padding: 8px 16px;
@@ -16,6 +17,9 @@
 
 .wrapper {
     @include grid(4, 1fr, 2rem);
+    @media (max-width: $tablet-breakpoint) {
+        @include grid(2, 1fr, 1rem);
+    }
 }
 
 .productCard {

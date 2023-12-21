@@ -8,13 +8,22 @@
     padding-block: 5rem;
     &__section {
         @include flex(end, flex-start, column, 2rem);
+        @media (max-width: $tablet-breakpoint) {
+            align-items: center;
+        }
         @include sectionWidth();
         &__headline {
             font-size: $fs-800;
             align-self: start;
+            @media (max-width: $tablet-breakpoint) {
+                margin: 0 auto;
+            }
         }
         &__items {
             @include grid(4, 300px, 2rem);
+            @media (max-width: $tablet-breakpoint) {
+                @include grid(2, 1fr, 1rem);
+            }
         }
         &__button {
             @include buttonPrimary();

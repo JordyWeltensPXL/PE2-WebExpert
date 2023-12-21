@@ -3,6 +3,9 @@
 
 .cart {
     @include sectionWidth();
+    @media (max-width: $laptop-breakpoint) {
+        padding: 5%;
+    }
     &__headline {
         font-size: $fs-800;
         margin-top: $p-block;
@@ -21,6 +24,9 @@
 .cart__content {
     &-item-title {
         font-size: $fs-600;
+        @media (max-width: $tablet-breakpoint) {
+            font-size: $fs-500;
+        }
     };
     &-item-quantity {
         padding: 1rem;

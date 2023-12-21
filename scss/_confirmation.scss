@@ -4,6 +4,12 @@
 .transaction-confirmation {
     @include sectionWidth();
     margin-top: $p-block;
+    @media (max-width: $laptop-breakpoint) {
+        padding-inline: 2%;
+    }
+    @media (max-width: $tablet-breakpoint) {
+        padding-inline: 5%;
+    }
     &__headline {
         font-size: $fs-700;
         margin-bottom: .5rem;
