@@ -15,11 +15,17 @@ export const useCartStore = defineStore({
         0
       );
     },
+    totalQuantity() {
+      return this.cart.reduce((total, item) => total + item.quantity, 0);
+    },
     isEmptyCart() {
       return this.cart.length === 0;
     },
   },
   actions: {
+    getTotalQuantity() {
+      return this.cart.reduce((total, item) => total + item.quantity, 0);
+    },
     getItemTotal(item) {
       const price = item.album.price;
       return price * item.quantity;

@@ -25,7 +25,7 @@ export default {
     },
     cartItemCount() {
       const cartStore = useCartStore();
-      return cartStore.cart.length;
+      return cartStore.getTotalQuantity();
     }
   },
   methods: {
