@@ -40,6 +40,7 @@
     font-weight: $fw-700;
     padding: $button-padding;
     cursor: $hover-pointer;
+    border-radius: 3px;
 }
 
 @mixin form() {
@@ -51,6 +52,7 @@
     background-color: $neutral-grey;
     padding: $button-padding;
     width: 100%;
+    border-radius: 3px;
 }
 
 @mixin overlay() {

@@ -4,7 +4,7 @@
     <div class="details">
       <p class="details__title">{{album.title}}</p>
       <p class="details__desc">{{album.description}}</p> 
-      <p class="details__price">€ {{album.price}} <span>including {{ album.VAT }} % VAT.</span></p> 
+      <p class="details__price">$ {{album.price}} <span>including {{ album.VAT }} % VAT.</span></p> 
       <p class="details__stock" v-if="hasStock">In Stock</p>
       <p class="details__stock details__stock--out-of-stock" v-else>Out of stock</p>
       <div v-if="hasStock" class="details__quantity">

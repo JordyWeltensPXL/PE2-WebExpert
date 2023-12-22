@@ -1,11 +1,19 @@
 [{
     "id": 1,
+    "name": "Jordy",
     "email": "jordy.weltens@student.pxl.be",
-    "password": "password123"
+    "password": "password123",
+    "address": "randomaddresslaan",
+    "number": 16,
+    "postalCode": 3590
 },
 {
     "id": 2,
+    "name": "Robin",
     "email": "robin.braibants@lector.pxl.be",
-    "password": "password456"
+    "password": "password456",
+    "address": "ookgeenaddressstraat",
+    "number": 74,
+    "postalCode": 3500
 }]
   

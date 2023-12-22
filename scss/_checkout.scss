@@ -11,7 +11,7 @@
         padding: 5%;
     }
     &__title {
-        font-size: $fs-800;
+        font-size: $fs-900;
     }
     &__list {
         padding-block: 1rem;
@@ -21,6 +21,7 @@
     }
     &__total-incl-vat {
         font-size: $fs-600;
+        font-weight: $fw-700;
     }
     &__link button {
         text-decoration: underline;
@@ -45,18 +46,42 @@
     &__input {
         background-color: $neutral-grey;
         padding: 1rem;
-        width: 30%;
+        width: 400px;
+        @media (max-width: $tablet-breakpoint) {
+            width: 100%;
+        }
     }
     &__submit {
-        padding: 1rem;
-        background-color: $primary-color;
-        color: $neutral-white;
-        font-weight: $fw-700;
-        cursor: $hover-pointer;
-        display: block;
-        margin-top: 2rem;
+        @include buttonPrimary();
+        margin-block: 2rem
     }
     &-wrapper {
         @include flex(center, start, row, 1rem)
     }
+}
+
+.address__form {
+    @include sectionWidth();
+    margin-top: 3rem;
+    @media (max-width: $laptop-breakpoint) {
+        padding-inline: 5%;
+    }
+    &--input {
+        @include inputField();
+        width: 400px;
+        @media (max-width: $tablet-breakpoint) {
+            width: 100%;
+        }
+    }
+    &--title {
+        font-size: $fs-500;
+        font-weight: $fw-700;
+        margin-block: 2rem;
+        border-top: 1px solid grey;
+        padding-top: 3rem
+    }
+}
+
+.billing-form__fields {
+    @include flex(start, start, column, 1rem);
 }

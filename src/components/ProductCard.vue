@@ -3,7 +3,7 @@
       <div class="filters">
           <p>Filter:</p>
           <button class="filters__button" @click="toggleFilter('stock')">In Stock</button>
-          <button class="filters__button" @click="toggleFilter('price')">&lt; € 20</button>
+          <button class="filters__button" @click="toggleFilter('price')">&lt; $ 20</button>
         </div>
       <div class="wrapper">
           <div v-for="album in displayedAlbums" :key="album.id" class="productCard">
@@ -12,7 +12,7 @@
             </RouterLink>
             <div class="productCard__info">
               <p class="productCard__info__headline">{{ album.title }}</p>
-              <p class="productCard__info__price">€ {{ album.price }}</p>                
+              <p class="productCard__info__price">$ {{ album.price }}</p>                
             </div>
           </div>
         </div>

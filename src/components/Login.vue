@@ -21,7 +21,7 @@
   <div v-else>
     <div class="loggedIn">
       <p class="loggedIn__title">Login succesful.</p>
-      <p class="loggedIn__welcome">Welcome to soundcrate. <br><br>Discover the essence of music authenticity with our hand-signed
+      <p class="loggedIn__welcome">Welcome to soundcrate.<br><br>Discover the essence of music authenticity with our hand-signed
         albums. Each one is a collector's gem, a tangible connection
         to the artists you love.</p>
       <button @click="logout()" class="loggedIn__button">Logout</button>
@@ -41,29 +41,30 @@ export default {
       email: '',
       password: '',
       users: usersData,
+      authStore: useAuthStore()
     };
   },
   computed: {
     loggedIn() {
-      return useAuthStore().isLoggedIn;
+      return this.authStore.isLoggedIn;
+    },
+    currentUser() {
+      return this.authStore.currentUser;
     }
   },
   methods: {
     login() {
-  const users = this.users;
-  const match = users.find(user => user.email === this.email && user.password === this.password);
-  
-  if (match) {
-    const authStore = useAuthStore();
-    authStore.login();
-    router.push({ name: 'cart' });
-  } else {
-    alert('Invalid email or password!');
-  }
-},
+      const match = this.users.find(user => user.email === this.email && user.password === this.password);
+      
+      if (match) {
+        this.authStore.login(match); // Use the store instance
+        router.push({ name: 'cart' });
+      } else {
+        alert('Invalid email or password!');
+      }
+    },
 logout() {
-  const authStore = useAuthStore();
-    authStore.logout();
+    this.authStore.logout();
     },
   }
 };

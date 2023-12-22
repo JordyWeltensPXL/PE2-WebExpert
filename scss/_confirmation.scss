@@ -11,7 +11,7 @@
         padding-inline: 5%;
     }
     &__headline {
-        font-size: $fs-700;
+        font-size: $fs-900;
         margin-bottom: .5rem;
     }
     &__message {
@@ -20,6 +20,8 @@
     &__total {
         font-size: $fs-600;
         margin-top: 2rem;
+        font-weight: $fw-700;
+        margin-bottom: 1rem;
     }
     &__link {
         text-decoration: underline;

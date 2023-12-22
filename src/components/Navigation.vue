@@ -17,28 +17,36 @@
 <script>
 import { useCartStore } from '@/stores/cart';
 import { useAuthStore } from '@/stores/auth';
+
 export default {
   computed: {
     isEmptyCart() {
-      const cartStore = useCartStore();
-      return cartStore.isEmptyCart;
+      return this.cartStore.isEmptyCart;
     },
     cartItemCount() {
-      const cartStore = useCartStore();
-      return cartStore.getTotalQuantity();
+      return this.cartStore.getTotalQuantity();
     }
   },
   methods: {
     loginState() {
-      const authStore = useAuthStore();
-      if (!authStore.isLoggedIn) {
+      if (!this.authStore.isLoggedIn) {
         this.$router.push({ name: 'login' });
-        return;
       }
     }
+  },
+  created() {
+    this.cartStore = useCartStore();
+    this.authStore = useAuthStore();
+  },
+  data() {
+    return {
+      cartStore: null,
+      authStore: null
+    };
   }
 }
 </script>
+
 
 <style>
 </style>
