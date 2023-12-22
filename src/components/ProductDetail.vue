@@ -22,7 +22,6 @@
 <script>
 import albumsData from "@/albums.json";
 import { useCartStore } from '@/stores/cart';
-import { useAuthStore } from '@/stores/auth';
 
 export default {
   data() {
@@ -44,8 +43,6 @@ export default {
   },
   methods: {
     addToCart() {
-      const authStore = useAuthStore();
-
       const cartStore = useCartStore();
       for (let i = 0; i < this.selectedQuantity; i++) {
         cartStore.addToCart(this.album);

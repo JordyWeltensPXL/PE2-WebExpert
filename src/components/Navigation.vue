@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import { useCartStore } from '@/stores/cart'; // Assuming your stores are exported from index.js
-import { useAuthStore } from '@/stores/auth'; // Assuming your stores are exported from index.js
+import { useCartStore } from '@/stores/cart';
+import { useAuthStore } from '@/stores/auth';
 export default {
   computed: {
     isEmptyCart() {
