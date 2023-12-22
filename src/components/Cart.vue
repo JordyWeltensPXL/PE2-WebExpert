@@ -22,18 +22,18 @@
           </div>
         </div>
       </div>
-      <p class="cart__totalPrice">Total: € {{ formattedTotal }}{{total}}</p>
+      <p class="cart__totalPrice">Total: € {{ computedTotal }}</p>
       <div class="cart__buttonsWrapper">
         <RouterLink to="/checkout"><button class="cart__orderButton">Order Now</button></RouterLink>
         <button class="cart__clearButton" @click="clearCart">Clear Shopping Cart</button>
       </div>
-      
     </div>
   </div>
 </template>
   
 <script>
 import { useCartStore } from '@/stores/cart';
+import { computed } from 'vue'; 
 
 export default {
   setup() {
@@ -48,21 +48,23 @@ export default {
       return (price * quantity).toFixed(2);
     };
 
-    const calculateTotalVAT = () => {
-      return cart.reduce((total, cartItem) => {
-        return total + calculateVAT(cartItem.album.price, cartItem.album.VAT) * cartItem.quantity;
-      }, 0).toFixed(2);
-    };
-
     const incrementQuantity = (cartItem) => {
-      cartItem.quantity += 1;
+      const index = cartStore.cart.findIndex(item => item.album.id === cartItem.album.id);
+      if (index !== -1) {
+        cartStore.cart[index].quantity += 1;
+        cartStore.saveCartToLocalStorage();
+      }
     };
 
     const decrementQuantity = (cartItem) => {
-      if (cartItem.quantity > 1) {
-        cartItem.quantity -= 1;
+      const index = cartStore.cart.findIndex(item => item.album.id === cartItem.album.id);
+      if (index !== -1 && cartStore.cart[index].quantity > 1) {
+        cartStore.cart[index].quantity -= 1;
+        cartStore.saveCartToLocalStorage();
       }
     };
+
+    const computedTotal = computed(() => cartStore.formattedTotal);
 
     return {
       cart: cartStore.cart,
@@ -70,16 +72,13 @@ export default {
       clearCart: cartStore.clearCart,
       calculateVAT,
       calculateSubtotal,
-      calculateTotalVAT,
       incrementQuantity,
       decrementQuantity,
-      formattedTotal: cartStore.formattedTotal
+      computedTotal
     };
   },
 };
 </script>
 
-
 <style>
-
 </style>

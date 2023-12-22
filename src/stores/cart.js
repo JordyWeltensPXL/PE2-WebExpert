@@ -7,12 +7,7 @@ export const useCartStore = defineStore({
   }),
   getters: {
     formattedTotal() {
-      const total = this.total;
-      const formattedTotal = total.toLocaleString("en-US", {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      });
-      return formattedTotal;
+      return this.total.toFixed(2);
     },
     total() {
       return this.cart.reduce(
@@ -55,7 +50,24 @@ export const useCartStore = defineStore({
         }
         this.saveCartToLocalStorage();
       }
-      this.total;
+    },
+    incrementQuantity(cartItem) {
+      const index = this.cart.findIndex(
+        (item) => item.album.id === cartItem.album.id
+      );
+      if (index !== -1) {
+        this.cart[index].quantity += 1;
+        this.saveCartToLocalStorage();
+      }
+    },
+    decrementQuantity(cartItem) {
+      const index = this.cart.findIndex(
+        (item) => item.album.id === cartItem.album.id
+      );
+      if (index !== -1 && this.cart[index].quantity > 1) {
+        this.cart[index].quantity -= 1;
+        this.saveCartToLocalStorage();
+      }
     },
     clearCart() {
       this.cart = [];

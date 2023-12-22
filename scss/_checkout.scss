@@ -8,7 +8,7 @@
         padding: 5%;
     }
     @media (max-width: $laptop-breakpoint) {
-        padding: 2%;
+        padding: 5%;
     }
     &__title {
         font-size: $fs-800;
@@ -36,7 +36,7 @@
         padding-inline: 5%;
     }
     @media (max-width: $laptop-breakpoint) {
-        padding-inline: 2%;
+        padding-inline: 5%;
     }
     &__fields {
         @include flex(start, start, row, 1rem);

@@ -45,10 +45,6 @@ export default {
   methods: {
     addToCart() {
       const authStore = useAuthStore();
-      if (!authStore.isLoggedIn) {
-        this.$router.push({ name: 'login' });
-        return;
-      }
 
       const cartStore = useCartStore();
       for (let i = 0; i < this.selectedQuantity; i++) {

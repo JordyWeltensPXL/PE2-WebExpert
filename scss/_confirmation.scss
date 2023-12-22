@@ -25,4 +25,7 @@
         text-decoration: underline;
         cursor: $hover-pointer;
     }
+    &__list {
+        @include flex(start, center, column, 1rem)
+    }
 }
