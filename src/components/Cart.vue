@@ -18,7 +18,6 @@
             <p class="cart__content-item-VAT">VAT ({{ cartItem.album.VAT }}%): € {{ calculateVAT(cartItem.album.price, cartItem.album.VAT) }}</p>
             <p class="cart__content-item-price">Price: € {{ cartItem.album.price }} each</p>
             <p class="cart__content-item-subtotal">Subtotal (per item): € {{ calculateSubtotal(cartItem.album.price, cartItem.quantity) }}</p>
-            <button class="cart__content-item-removeButton" @click="removeFromCart(cartItem.album.id)">Remove item</button>
           </div>
         </div>
       </div>
@@ -49,20 +48,12 @@ export default {
     };
 
     const incrementQuantity = (cartItem) => {
-      const index = cartStore.cart.findIndex(item => item.album.id === cartItem.album.id);
-      if (index !== -1) {
-        cartStore.cart[index].quantity += 1;
-        cartStore.saveCartToLocalStorage();
-      }
+      cartStore.incrementQuantity(cartItem);
     };
 
     const decrementQuantity = (cartItem) => {
-      const index = cartStore.cart.findIndex(item => item.album.id === cartItem.album.id);
-      if (index !== -1 && cartStore.cart[index].quantity > 1) {
-        cartStore.cart[index].quantity -= 1;
-        cartStore.saveCartToLocalStorage();
-      }
-    };
+      cartStore.decrementQuantity(cartItem)
+};
 
     const computedTotal = computed(() => cartStore.formattedTotal);
 

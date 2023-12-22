@@ -31,19 +31,6 @@ export const useCartStore = defineStore({
       }
       this.saveCartToLocalStorage();
     },
-    removeFromCart(albumId) {
-      const index = this.cart.findIndex((item) => item.album.id === albumId);
-
-      if (index !== -1) {
-        const item = this.cart[index];
-        if (item.quantity > 1) {
-          item.quantity -= 1;
-        } else {
-          this.cart.splice(index, 1);
-        }
-        this.saveCartToLocalStorage();
-      }
-    },
     incrementQuantity(cartItem) {
       const index = this.cart.findIndex(
         (item) => item.album.id === cartItem.album.id
@@ -59,11 +46,13 @@ export const useCartStore = defineStore({
       );
       if (index !== -1 && this.cart[index].quantity > 1) {
         this.cart[index].quantity -= 1;
-        this.saveCartToLocalStorage();
+      } else if (this.cart[index].quantity === 1) {
+        this.cart.splice(index, 1);
       }
+      this.saveCartToLocalStorage();
     },
     clearCart() {
-      this.cart = [];
+      this.cart.splice(0, this.cart.length);
       this.saveCartToLocalStorage();
     },
     saveCartToLocalStorage() {
