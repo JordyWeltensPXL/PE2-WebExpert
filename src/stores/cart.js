@@ -15,10 +15,13 @@ export const useCartStore = defineStore({
         0
       );
     },
+    isEmptyCart() {
+      return this.cart.length === 0;
+    },
   },
   actions: {
     getItemTotal(item) {
-      const price = parseFloat(item.album.price);
+      const price = item.album.price;
       return price * item.quantity;
     },
     addToCart(album) {
