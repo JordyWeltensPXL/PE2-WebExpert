@@ -15,8 +15,8 @@
               <span class="cart__content-item-quantity">{{ cartItem.quantity }}</span>
               <button class="cart__content-button" @click="incrementQuantity(cartItem)">+</button>
             </div>
-            <p class="cart__content-item-price">Price: € {{ cartItem.album.price }} each</p>
             <p class="cart__content-item-VAT">VAT ({{ cartItem.album.VAT }}%): € {{ calculateVAT(cartItem.album.price, cartItem.album.VAT) }}</p>
+            <p class="cart__content-item-price">Price: € {{ cartItem.album.price }} each</p>
             <p class="cart__content-item-subtotal">Subtotal (per item): € {{ calculateSubtotal(cartItem.album.price, cartItem.quantity) }}</p>
             <button class="cart__content-item-removeButton" @click="removeFromCart(cartItem.album.id)">Remove item</button>
           </div>

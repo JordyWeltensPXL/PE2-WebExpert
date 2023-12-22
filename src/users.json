@@ -1,8 +1,10 @@
 [{
+    "id": 1,
     "email": "jordy.weltens@student.pxl.be",
     "password": "password123"
 },
 {
+    "id": 2,
     "email": "robin.braibants@lector.pxl.be",
     "password": "password456"
 }]

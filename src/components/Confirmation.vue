@@ -8,8 +8,8 @@
         <li v-for="cartItem in cart" :key="cartItem.album.id" class="transaction-confirmation__item">
             <strong>{{ cartItem.album.title }}</strong>
             <p>Quantity: {{ cartItem.quantity }}</p>
-            <p>Price: € {{ cartItem.album.price }} each</p>
             <p>VAT ({{ cartItem.album.VAT }}%): € {{ calculateVAT(cartItem.album.price, cartItem.album.VAT) }}</p>
+            <p>Price: € {{ cartItem.album.price }} each</p>
             <p>Subtotal: € {{ calculateSubtotal(cartItem.album.price, cartItem.quantity) }}</p>
         </li>
     </ul>

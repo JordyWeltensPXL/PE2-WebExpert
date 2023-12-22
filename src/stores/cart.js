@@ -18,15 +18,8 @@ export const useCartStore = defineStore({
   },
   actions: {
     getItemTotal(item) {
-      if (
-        item.album &&
-        typeof item.album.price === "string" &&
-        !isNaN(parseFloat(item.album.price))
-      ) {
-        const price = parseFloat(item.album.price);
-        return price * item.quantity;
-      }
-      return 0;
+      const price = parseFloat(item.album.price);
+      return price * item.quantity;
     },
     addToCart(album) {
       const existingItem = this.cart.find((item) => item.album.id === album.id);
