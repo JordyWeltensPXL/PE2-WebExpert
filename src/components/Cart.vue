@@ -24,7 +24,7 @@
       </div>
       <p class="cart__totalPrice">Total: $ {{ computedTotal }}</p>
       <div class="cart__buttonsWrapper">
-        <RouterLink to="/checkout"><button class="cart__orderButton">Order Now</button></RouterLink>
+        <RouterLink @click="loginState()" to="/checkout"><button class="cart__orderButton">Order Now</button></RouterLink>
         <button class="cart__clearButton" @click="clearCart">Clear Shopping Cart</button>
       </div>
     </div>
@@ -33,9 +33,22 @@
   
 <script>
 import { useCartStore } from '@/stores/cart';
+import { useAuthStore } from '@/stores/auth';
 import { computed } from 'vue'; 
 
 export default {
+  created() {
+    this.cartStore = useCartStore();
+    this.authStore = useAuthStore();
+  },
+  methods: {
+    loginState() {
+      if (!this.authStore.isLoggedIn) {
+        this.$router.push({ name: 'login' });
+      }
+    }
+  },
+  
   setup() {
     const cartStore = useCartStore();
 

@@ -6,7 +6,7 @@
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/products">Products</RouterLink>
       <RouterLink to="/login">Login</RouterLink>
-      <RouterLink class="cartLink" @click="loginState()" to="/cart">
+      <RouterLink class="cartLink" to="/cart">
         <i class="fa-solid fa-cart-shopping"></i>
         <span v-if="!isEmptyCart" class="cart-indicator">{{ cartItemCount }}</span>
       </RouterLink>
@@ -16,7 +16,6 @@
 
 <script>
 import { useCartStore } from '@/stores/cart';
-import { useAuthStore } from '@/stores/auth';
 
 export default {
   computed: {
@@ -27,21 +26,12 @@ export default {
       return this.cartStore.getTotalQuantity();
     }
   },
-  methods: {
-    loginState() {
-      if (!this.authStore.isLoggedIn) {
-        this.$router.push({ name: 'login' });
-      }
-    }
-  },
   created() {
     this.cartStore = useCartStore();
-    this.authStore = useAuthStore();
   },
   data() {
     return {
       cartStore: null,
-      authStore: null
     };
   }
 }
